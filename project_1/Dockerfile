@@ -1,21 +1,20 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y \
-    openjdk-8-jdk \
-    kotlin \
-    wget \
-    unzip
+ENV TZ = "Europe/Warsaw"
 
-ENV GRADLE_VERSION=7.6.4
-RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
-    unzip -d /opt gradle-${GRADLE_VERSION}-bin.zip && \
-    ln -s /opt/gradle-${GRADLE_VERSION} /opt/gradle && \
-    rm gradle-${GRADLE_VERSION}-bin.zip
+RUN apt-get update && \
+    apt-get -y install software-properties-common tzdata curl unzip zip
 
-ENV PATH="${PATH}:/opt/gradle/bin"
+RUN add-apt-repository ppa:deadsnakes/ppa && \
+    apt-get -y install python3.8 openjdk-8-jdk
 
-COPY build.gradle /app/
+RUN curl -s "https://get.sdkman.io" | bash && \
+    bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install kotlin && sdk install gradle"
 
-WORKDIR /app
+ENV PATH=$PATH:/root/.sdkman/candidates/gradle/current/bin
 
-RUN gradle build --no-daemon
+COPY app ./app
+
+WORKDIR app
+
+CMD ["gradle", "run", "-p", "."]

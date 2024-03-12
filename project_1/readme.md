@@ -1,6 +1,6 @@
 # Dockerfile with Gradle
 
-This project contains a Dockerfile for building a Docker image with Gradle installed.
+This project contains a Dockerfile for building a Docker image with Gradle installed and a simple `Hello World` Kotlin app.
 
 ## Usage
 
