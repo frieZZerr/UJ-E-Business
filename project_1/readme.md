@@ -1,6 +1,6 @@
-# Dockerfile with Java and Kotlin
+# Dockerfile with Gradle
 
-This project contains a Dockerfile for building a Docker image with Java and Kotlin installed.
+This project contains a Dockerfile for building a Docker image with Gradle installed.
 
 ## Usage
 
@@ -10,4 +10,4 @@ To build the Docker image, run the following command:
 docker build -t app .
 ```
 
-This will build the Docker image with Java and Kotlin installed and ready to use.
+This will build the Docker image with Gradle installed and ready to use.
