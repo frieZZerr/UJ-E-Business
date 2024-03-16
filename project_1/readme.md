@@ -1,13 +1,13 @@
-# Dockerfile with Gradle
+# Dockerfile with Gradle and docker-compose
 
 This project contains a Dockerfile for building a Docker image with Gradle installed and a simple `Hello World` Kotlin app.
 
 ## Usage
 
-To build the Docker image, run the following command:
+To build and run the Docker image, use the following command:
 
 ```bash
-docker build -t app .
+docker-compose up
 ```
 
-This will build the Docker image with Gradle installed and ready to use.
+This will build the Docker image with Gradle installed and run the Kotlin app.
