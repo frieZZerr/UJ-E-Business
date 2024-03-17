@@ -11,3 +11,7 @@ docker-compose up
 ```
 
 This will build the Docker image with Gradle installed and run the Kotlin app.
+
+## DockerHub image
+
+- [friezzerr/project_1](https://hub.docker.com/r/friezzerr/project_1)
