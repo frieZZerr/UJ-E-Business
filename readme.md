@@ -19,3 +19,19 @@ Create a Docker image based on a Debian distribution (without installed Java, Ko
 :white_check_mark: 5.0 - [Add docker-compose configuration](https://github.com/frieZZerr/UJ-E-Business/commit/67d3d680b5bf157f8d034b77fe38d19e8ded5a20)
 
 Code: [project_1](https://github.com/frieZZerr/UJ-E-Business/tree/project_1)
+
+## Project 2 - Scala
+
+Create an application using the Play framework in Scala 2.
+
+:white_check_mark: 3.0 - [Create a controller for Products](https://github.com/frieZZerr/UJ-E-Business/commit/8e798a98c201ae0a1561a1b6f23b1e10e7bf13a1)
+
+:white_check_mark: 3.5 - [Create endpoints according to CRUD - data retrieved from the list](https://github.com/frieZZerr/UJ-E-Business/commit/d0bce08efa8fe680a602895b622e6ab52b52c09e)
+
+:white_check_mark: 4.0 - [Create controllers for Categories and Cart + endpoints according to CRUD](https://github.com/frieZZerr/UJ-E-Business/commit/f5a1a760b7c72dd593af1395b6d81a7b42081325)
+
+:x: 4.5 - [Run the application on Docker (create an image) and add a script to run the application via ngrok]()
+
+:x: 5.0 - [Add CORS configuration for two hosts for CRUD methods]()
+
+Code: [project_2](https://github.com/frieZZerr/UJ-E-Business/tree/project_2)
