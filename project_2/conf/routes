@@ -15,3 +15,16 @@ GET     /products/:id               controllers.ProductController.getProductById
 POST    /products                   controllers.ProductController.addProduct
 PUT     /products/:id               controllers.ProductController.updateProduct(id: Long)
 DELETE  /products/:id               controllers.ProductController.deleteProduct(id: Long)
+
+# CRUD endpoints for categories
+GET     /categories                   controllers.CategoryController.getAllCategories
+GET     /categories/:id               controllers.CategoryController.getCategoryById(id: Long)
+POST    /categories                   controllers.CategoryController.addCategory
+PUT     /categories/:id               controllers.CategoryController.updateCategory(id: Long)
+DELETE  /categories/:id               controllers.CategoryController.deleteCategory(id: Long)
+
+# CRUD endpoints for cart
+GET     /cart                                               controllers.CartController.getCart
+POST    /cart                                               controllers.CartController.addItemToCart
+PUT     /cart/item/:productId/quantity/:quantity            controllers.CartController.updateCartItemQuantity(productId: Long, quantity: Int)
+DELETE  /cart/:productId                                    controllers.CartController.removeItemFromCart(productId: Long)
