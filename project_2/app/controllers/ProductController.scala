@@ -30,4 +30,35 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
       case None => Future.successful(NotFound)
     }
   }
+
+  def addProduct: Action[JsValue] = Action.async(parse.json) { implicit request =>
+    request.body.validate[Product] match {
+      case JsSuccess(product, _) =>
+        products = products :+ product
+        Future.successful(Created)
+      case JsError(_) => Future.successful(BadRequest)
+    }
+  }
+
+  def updateProduct(id: Long): Action[JsValue] = Action.async(parse.json) { implicit request =>
+    request.body.validate[Product] match {
+      case JsSuccess(updatedProduct, _) =>
+        products.find(_.id == id) match {
+          case Some(_) =>
+            products = products.map(p => if (p.id == id) updatedProduct else p)
+            Future.successful(Ok)
+          case None => Future.successful(NotFound)
+        }
+      case JsError(_) => Future.successful(BadRequest)
+    }
+  }
+
+  def deleteProduct(id: Long): Action[AnyContent] = Action.async { implicit request =>
+    products.find(_.id == id) match {
+      case Some(_) =>
+        products = products.filterNot(_.id == id)
+        Future.successful(Ok)
+      case None => Future.successful(NotFound)
+    }
+  }
 }
