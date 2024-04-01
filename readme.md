@@ -35,3 +35,19 @@ Create an application using the Play framework in Scala 2.
 :x: 5.0 - [Add CORS configuration for two hosts for CRUD methods]()
 
 Code: [project_2](https://github.com/frieZZerr/UJ-E-Business/tree/project_2)
+
+## Project 3 - Kotlin
+
+Create an application using the Ktor framework in Kotlin.
+
+:white_check_mark: 3.0 - [Create a Kotlin client application using the Ktor framework, which allows sending messages to the Discord platform](https://github.com/frieZZerr/UJ-E-Business/commit/691e8b85b36bc22281c1bb9d6214eef90a2df673)
+
+:x: 3.5 - [The application is capable of receiving messages from users on the Discord platform directed to the application]()
+
+:x: 4.0 - [Return a list of categories upon user request]()
+
+:x: 4.5 - [Return a list of products based on the requested category]()
+
+:x: 5.0 - [Additionally, the application will handle one of the following platforms: Slack, Messenger, Webex, Skype, Discord]()
+
+Code: [project_3](https://github.com/frieZZerr/UJ-E-Business/tree/project_3)
