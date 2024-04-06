@@ -9,25 +9,19 @@ This is a Go project for managing products using the Echo framework.
 - Echo framework
 
 ### Installation
-1. Clone the repository:
-
-    ```bash
-    git clone <repository-url>
-    ```
-
-2. Navigate to the project directory:
+1. Navigate to the project directory:
 
     ```bash
     cd project_4
     ```
 
-3. Install dependencies:
+2. Install dependencies:
 
     ```bash
     go mod tidy
     ```
 
-4. Build the project:
+3. Build the project:
 
     ```bash
     go build
@@ -47,3 +41,19 @@ This is a Go project for managing products using the Echo framework.
     - POST /products: Create a new product
     - PUT /products/:id: Update an existing product
     - DELETE /products/:id: Delete a product by ID
+
+3. Access the endpoints to manage carts:
+
+    - GET /carts: Retrieve all carts
+    - GET /carts/:id: Retrieve a specific cart by ID
+    - POST /carts: Create a new cart
+    - PUT /carts/:id: Update an existing cart
+    - DELETE /carts/:id: Delete a cart by ID
+
+4. Access the endpoints to manage categories:
+
+    - GET /categories: Retrieve all categories
+    - GET /categories/:id: Retrieve a specific category by ID
+    - POST /categories: Create a new category
+    - PUT /categories/:id: Update an existing category
+    - DELETE /categories/:id: Delete a category by ID

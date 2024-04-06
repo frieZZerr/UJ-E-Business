@@ -10,6 +10,7 @@ import (
     "github.com/labstack/echo/v4"
     "github.com/go-playground/validator/v10"
     "project_4/src/models"
+    "project_4/src/scopes"
 )
 
 type CategoryController struct{}
@@ -18,7 +19,7 @@ func (w *CategoryController) GetCategories(c echo.Context) error {
     db := c.Get("db").(*gorm.DB)
 
     var categories []models.Category
-    db.Find(&categories)
+    db.Scopes(scopes.WithProduct).Find(&categories)
 
     return c.JSON(http.StatusOK, &categories)
 }
@@ -28,8 +29,8 @@ func (w *CategoryController) GetCategoryById(c echo.Context) error {
 
     id, _ := strconv.Atoi(c.Param("id"))
     var category models.Category
-    
-    db.First(&category, id)
+
+    db.Scopes(scopes.WithProduct).First(&category, id)
 
     if category.ID == 0 {
         return c.JSON(http.StatusNotFound, "Category with id "+c.Param("id")+" not found")
