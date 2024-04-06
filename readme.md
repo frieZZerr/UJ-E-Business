@@ -51,3 +51,19 @@ Create an application using the Ktor framework in Kotlin.
 :x: 5.0 - [Additionally, the application will handle one of the following platforms: Slack, Messenger, Webex, Skype, Discord]()
 
 Code: [project_3](https://github.com/frieZZerr/UJ-E-Business/tree/project_3)
+
+## Project 4 - Go
+
+Create an application using the Echo framework in Go.
+
+:white_check_mark: 3.0 - [Create a Products controller compliant with CRUD operations](https://github.com/frieZZerr/UJ-E-Business/commit/25492bdbdfc306b0a1aeb6e9fc4f9534c6e67a3f)
+
+:white_check_mark: 3.5 - [Create a Product model using Gorm and use the model to handle products (CRUD) in the controller](https://github.com/frieZZerr/UJ-E-Business/commit/25492bdbdfc306b0a1aeb6e9fc4f9534c6e67a3f)
+
+:white_check_mark: 4.0 - [Add a Cart model and implement the corresponding endpoint](https://github.com/frieZZerr/UJ-E-Business/commit/7da6c4acf9966b994af1df02412b5e9fc4eca74d)
+
+:white_check_mark: 4.5 - [Create a Category model and establish a relationship between the category and the product](https://github.com/frieZZerr/UJ-E-Business/commit/5f3041a6b188985e8be086aea350bfe61099bf0c)
+
+:white_check_mark: 5.0 - [Group queries into Gorm scopes](https://github.com/frieZZerr/UJ-E-Business/commit/348c088d05789c8936bda22ddaa0a38e9f6d439b)
+
+Code: [project_4](https://github.com/frieZZerr/UJ-E-Business/tree/project_4)
