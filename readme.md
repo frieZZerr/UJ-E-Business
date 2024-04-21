@@ -67,3 +67,19 @@ Create an application using the Echo framework in Go.
 :white_check_mark: 5.0 - [Group queries into Gorm scopes](https://github.com/frieZZerr/UJ-E-Business/commit/348c088d05789c8936bda22ddaa0a38e9f6d439b)
 
 Code: [project_4](https://github.com/frieZZerr/UJ-E-Business/tree/project_4)
+
+## Project 5 - React
+
+Create a client-side application using the React.js library.
+
+:white_check_mark: 3.0 - [Create Products and Payments components](https://github.com/frieZZerr/UJ-E-Business/commit/6be1e1d0ee59c37fb49897452d3bc40fab4422e2)
+
+:x: 3.5 - [Add Cart component with a view and routing]()
+
+:x: 4.0 - [Communicate between server with React-Hooks]()
+
+:x: 4.5 - [Create docker-compose]()
+
+:white_check_mark: 5.0 - [Use axios with CORS headers](https://github.com/frieZZerr/UJ-E-Business/commit/6be1e1d0ee59c37fb49897452d3bc40fab4422e2)
+
+Code: [project_5](https://github.com/frieZZerr/UJ-E-Business/tree/project_5)
