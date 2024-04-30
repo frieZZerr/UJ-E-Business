@@ -83,3 +83,22 @@ Create a client-side application using the React.js library.
 :white_check_mark: 5.0 - [Use axios with CORS headers](https://github.com/frieZZerr/UJ-E-Business/commit/6be1e1d0ee59c37fb49897452d3bc40fab4422e2)
 
 Code: [project_5](https://github.com/frieZZerr/UJ-E-Business/tree/project_5)
+
+## Project 6 - Cypress
+
+Create 20 test cases in one of the following solutions:
+
+- Cypress JS (JS)
+- Selenium (Kotlin, Python, Java, JS, Go, Scala)
+
+:white_check_mark: 3.0 - [Create 20 test cases in CypressJS](https://github.com/frieZZerr/UJ-E-Business/commit/8b3854d60bd2a6e5cd5012aa2d21c0d5e2a92c3e)
+
+:x: 3.5 - [Extend the functional tests to include a minimum of 50 assertions]()
+
+:x: 4.0 - [Create unit tests for a selected previous project with a minimum of 50 assertions]()
+
+:x: 4.5 - [Add API tests, covering all endpoints with at least one negative scenario per endpoint]()
+
+:x: 5.0 - [Run the functional tests on Browserstack]()
+
+Code: [project_6](https://github.com/frieZZerr/UJ-E-Business/tree/project_6)
