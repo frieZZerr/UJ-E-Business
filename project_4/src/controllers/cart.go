@@ -3,6 +3,7 @@
 package controllers
 
 import (
+    "fmt"
     "strconv"
     "net/http"
     "gorm.io/gorm"
@@ -10,6 +11,10 @@ import (
     "github.com/go-playground/validator/v10"
     "project_4/src/models"
 )
+
+func cartNotFoundError(id string) string {
+	return fmt.Sprintf("Cart with id %s not found", id)
+}
 
 type CartController struct{}
 
@@ -31,7 +36,7 @@ func (w *CartController) GetCartById(c echo.Context) error {
     db.First(&cart, id)
 
     if cart.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Cart with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, cartNotFoundError(c.Param("id")))
     }
 
     return c.JSON(http.StatusOK, &cart)
@@ -67,7 +72,7 @@ func (w *CartController) UpdateCart(c echo.Context) error {
     db.First(&currentCart, id)
 
     if currentCart.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Cart with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, cartNotFoundError(c.Param("id")))
     }
 
     if err := c.Bind(&cart); err != nil {
@@ -93,7 +98,7 @@ func (w *CartController) DeleteCart(c echo.Context) error {
 
     db.First(&cart, id)
     if cart.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Cart with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, cartNotFoundError(c.Param("id")))
     }
 
     db.Delete(&models.Cart{}, id)

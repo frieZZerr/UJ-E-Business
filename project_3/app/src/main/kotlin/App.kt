@@ -29,7 +29,7 @@ suspend fun sendMessageToDiscord(message: String, webhookUrl: String) {
 }
 
 suspend fun main() {
-    val webhookUrl = "https://discord.com/api/webhooks/1223935575275606076/6dtZPe3FmoAsVbcRkCJv99g1dUQEbyIMZhWSQUwEKsDTvId6hZPPPjLFWyLW0mSb8AM5"
+    val webhookUrl = "<DISCORD_WEBHOOK_URL>"
     val message = "Hello from Ktor!"
 
     sendMessageToDiscord(message, webhookUrl)

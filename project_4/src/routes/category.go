@@ -7,12 +7,14 @@ import (
     "project_4/src/controllers"
 )
 
+const categiriesIDPath = "/categories/:id"
+
 func CategoryRoute(e *echo.Echo) {
     categoryController := controllers.CategoryController{}
 
     e.GET("/categories", categoryController.GetCategories)
-    e.GET("/categories/:id", categoryController.GetCategoryById)
+    e.GET(categiriesIDPath, categoryController.GetCategoryById)
     e.POST("/categories", categoryController.CreateCategory)
-    e.PUT("/categories/:id", categoryController.UpdateCategory)
-    e.DELETE("/categories/:id", categoryController.DeleteCategory)
+    e.PUT(categiriesIDPath, categoryController.UpdateCategory)
+    e.DELETE(categiriesIDPath, categoryController.DeleteCategory)
 }

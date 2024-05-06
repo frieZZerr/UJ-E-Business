@@ -7,12 +7,14 @@ import (
     "project_4/src/controllers"
 )
 
+const productIDPath = "/products/:id"
+
 func ProductRoute(e *echo.Echo) {
     productController := controllers.ProductController{}
 
     e.GET("/products", productController.GetProducts)
-    e.GET("/products/:id", productController.GetProductById)
+    e.GET(productIDPath, productController.GetProductById)
     e.POST("/products", productController.CreateProduct)
-    e.PUT("/products/:id", productController.UpdateProduct)
-    e.DELETE("/products/:id", productController.DeleteProduct)
+    e.PUT(productIDPath, productController.UpdateProduct)
+    e.DELETE(productIDPath, productController.DeleteProduct)
 }

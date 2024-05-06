@@ -3,6 +3,7 @@
 package controllers
 
 import (
+    "fmt"
     "strconv"
     "net/http"
     "gorm.io/gorm"
@@ -10,6 +11,10 @@ import (
     "github.com/labstack/echo/v4"
     "project_4/src/models"
 )
+
+func productNotFoundError(id string) string {
+	return fmt.Sprintf("Product with id %s not found", id)
+}
 
 type ProductController struct{}
 
@@ -31,7 +36,7 @@ func (w *ProductController) GetProductById(c echo.Context) error {
     db.First(&product, id)
 
     if product.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Product with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, productNotFoundError(c.Param("id")))
     }
 
     return c.JSON(http.StatusOK, &product)
@@ -74,7 +79,7 @@ func (w *ProductController) UpdateProduct(c echo.Context) error {
     db.First(&currentProduct, id)
 
     if currentProduct.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Product with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, productNotFoundError(c.Param("id")))
     }
 
     if err := c.Bind(&product); err != nil {
@@ -107,7 +112,7 @@ func (w *ProductController) DeleteProduct(c echo.Context) error {
 
     db.First(&product, id)
     if product.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Product with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, productNotFoundError(c.Param("id")))
     }
 
     db.Delete(&models.Product{}, id)

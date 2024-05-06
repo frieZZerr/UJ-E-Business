@@ -13,6 +13,10 @@ import (
     "project_4/src/scopes"
 )
 
+func categoryNotFoundError(id string) string {
+	return fmt.Sprintf("Category with id %s not found", id)
+}
+
 type CategoryController struct{}
 
 func (w *CategoryController) GetCategories(c echo.Context) error {
@@ -33,7 +37,7 @@ func (w *CategoryController) GetCategoryById(c echo.Context) error {
     db.Scopes(scopes.WithProduct).First(&category, id)
 
     if category.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Category with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, categoryNotFoundError(c.Param("id")))
     }
 
     return c.JSON(http.StatusOK, &category)
@@ -71,7 +75,7 @@ func (w *CategoryController) UpdateCategory(c echo.Context) error {
     db.First(&currentCategory, id)
 
     if currentCategory.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Category with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, categoryNotFoundError(c.Param("id")))
     }
 
     if err := c.Bind(&category); err != nil {
@@ -97,7 +101,7 @@ func (w *CategoryController) DeleteCategory(c echo.Context) error {
 
     db.First(&category, id)
     if category.ID == 0 {
-        return c.JSON(http.StatusNotFound, "Category with id "+c.Param("id")+" not found")
+        return c.JSON(http.StatusNotFound, categoryNotFoundError(c.Param("id")))
     }
 
     var productsCount int64

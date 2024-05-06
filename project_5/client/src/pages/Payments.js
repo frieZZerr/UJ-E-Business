@@ -30,25 +30,25 @@ const Payments = () => {
       <h2>Payments</h2>
       <form className="form">
         <label>
-          Product ID:
+          Product ID:{' '}
           <input type="text" name="productId" value={paymentData.productId} onChange={handleChange} />
         </label>
         <label>
-          Amount:
+          Amount:{' '}
           <input type="text" name="amount" value={paymentData.amount} onChange={handleChange} />
         </label>
       </form>
       <form onSubmit={handleSubmit} className="form">
         <label>
-          Card Number:
+          Card Number:{' '}
           <input type="text" name="cardNumber"/>
         </label>
         <label>
-          Expiry Date:
+          Expiry Date:{' '}
           <input type="text" name="expiryDate"/>
         </label>
         <label>
-          CVV:
+          CVV:{' '}
           <input type="text" name="cvv"/>
         </label>
         <button type="submit">Pay Now</button>
