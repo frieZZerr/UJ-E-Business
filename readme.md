@@ -102,3 +102,19 @@ Create 20 test cases in one of the following solutions:
 :x: 5.0 - [Run the functional tests on Browserstack]()
 
 Code: [project_6](https://github.com/frieZZerr/UJ-E-Business/tree/project_6)
+
+## Project 7 - SonarCloud
+
+Improve the applications to achieve 0 bugs, 0 vulnerabilities, 0 security hotspots, and 0 security vulnerabilities.
+
+:x: 3.0 - [Add a script to the appropriate server-side application code in git hooks]()
+
+:white_check_mark: 3.5 - [Eliminate all bugs in the code in Sonar (server-side application code)](https://github.com/frieZZerr/UJ-E-Business/commit/b4879114b3a8b54dfa21b462a308037f60bf1212)
+
+:white_check_mark: 4.0 - [Eliminate all code smells in the code in Sonar (server-side application code)](https://github.com/frieZZerr/UJ-E-Business/commit/b4879114b3a8b54dfa21b462a308037f60bf1212)
+
+:white_check_mark: 4.5 - [Eliminate all vulnerabilities and security issues in the code in Sonar (server-side application code](https://github.com/frieZZerr/UJ-E-Business/commit/b4879114b3a8b54dfa21b462a308037f60bf1212)
+
+:white_check_mark: 5.0 - [Eliminate all bugs and code smells in the client-side application code](https://github.com/frieZZerr/UJ-E-Business/commit/b4879114b3a8b54dfa21b462a308037f60bf1212)
+
+Code: [project_7](https://github.com/frieZZerr/UJ-E-Business/tree/project_7)
