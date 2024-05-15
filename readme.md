@@ -118,3 +118,19 @@ Improve the applications to achieve 0 bugs, 0 vulnerabilities, 0 security hotspo
 :white_check_mark: 5.0 - [Eliminate all bugs and code smells in the client-side application code](https://github.com/frieZZerr/UJ-E-Business/commit/b4879114b3a8b54dfa21b462a308037f60bf1212)
 
 Code: [project_7](https://github.com/frieZZerr/UJ-E-Business/tree/project_7)
+
+## Project 8 - OAuth2
+
+Direct creation of clients on the React side excluding server-side application from communication, e.g., using auth0, is prohibited. Correct communication: react-server-provider-server(via return uri)-react.
+
+:white_check_mark: 3.0 - [Login through server-side application (without OAuth2)](https://github.com/frieZZerr/UJ-E-Business/commit/ab0519113b6e6c548c680f7d477e0a5ec49e4d0e)
+
+:white_check_mark: 3.5 - [Registration through server-side application (without OAuth2)](https://github.com/frieZZerr/UJ-E-Business/commit/018dcfad2b769f70142b9ab0833638a1ce9b3544)
+
+:x: 4.0 - [Login via Google OAuth2)](https://github.com/frieZZerr/UJ-E-Business/commit/018dcfad2b769f70142b9ab0833638a1ce9b3544)
+
+:x: 4.5 - [Login via Facebook or Github OAuth2]()
+
+:x: 5.0 - [Saving OAuth2 login data on the server side]()
+
+Code: [project_8](https://github.com/frieZZerr/UJ-E-Business/tree/project_8)
