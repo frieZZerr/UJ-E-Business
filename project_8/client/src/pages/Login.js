@@ -36,6 +36,12 @@ function Login() {
             <label> Don't have account yet? </label>
             <button onClick={ () => { navigate("/register") } }> Register </button>
         </div>
+        
+        <div>
+            <form action="http://localhost:3001/auth/login/google" method="GET">
+                <button type="submit">Login with Google</button>
+            </form>
+        </div>
     </div>
 }
 
