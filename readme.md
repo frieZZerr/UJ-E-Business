@@ -134,3 +134,19 @@ Direct creation of clients on the React side excluding server-side application f
 :x: 5.0 - [Saving OAuth2 login data on the server side]()
 
 Code: [project_8](https://github.com/frieZZerr/UJ-E-Business/tree/project_8)
+
+## Project 9 - ChatGPT Bot
+
+Create a frontend application which will connect to a separate service. This service will analyze text from the user, send a query to GPT, and then forward the response back to the user.
+
+:white_check_mark: 3.0 - [Create service on the server side to connect with ChatGPT for chat services](https://github.com/frieZZerr/UJ-E-Business/commit/7e96fa95cfc7e41eb871797fe0e6363e3694db28)
+
+:white_check_mark: 3.5 - [Create user frontend interface which will communicate with the service](https://github.com/frieZZerr/UJ-E-Business/commit/7e96fa95cfc7e41eb871797fe0e6363e3694db28)
+
+:white_check_mark: 4.0 - [Create a list of 5 different openings and closings for conversations](https://github.com/frieZZerr/UJ-E-Business/commit/7e96fa95cfc7e41eb871797fe0e6363e3694db28)
+
+:x: 4.5 - [Filter for topics related to a store]()
+
+:x: 5.0 - [Filter responses by sentiment]()
+
+Code: [project_9](https://github.com/frieZZerr/UJ-E-Business/tree/project_9)
