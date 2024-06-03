@@ -7,7 +7,7 @@ app.use(cors());
 
 const { initDb } = require('./models/index');
 
-const port = 3001;
+const port = 8080;
 
 // Routers
 const postRouter = require('./routes/Posts');
