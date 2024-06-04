@@ -150,3 +150,20 @@ Create a frontend application which will connect to a separate service. This ser
 :x: 5.0 - [Filter responses by sentiment]()
 
 Code: [project_9](https://github.com/frieZZerr/UJ-E-Business/tree/project_9)
+
+## Project 10 - Cloud/CI
+
+Use GitHub Actions (other CI solutions are acceptable) and Azure cloud (other clouds are acceptable) to build and deploy a client application (frontend) and a server application (backend) as two separate applications.
+
+:white_check_mark: 3.0 - [Create the appropriate instances on the cloud side using Docker](https://github.com/frieZZerr/UJ-E-Business/commit/0fd4864ff6dd03f98dab955bc446dfc90ca3d9aa)
+
+:white_check_mark: 3.5 - [Create a suitable pipeline in GitHub Actions for building the application (e.g., via fatjar)](https://github.com/frieZZerr/UJ-E-Business/commit/0888152be8233be4d51e150cec471de5da57f773)
+
+:white_check_mark: 4.0 - [Add email notifications for application builds](https://github.com/frieZZerr/UJ-E-Business/commit/0888152be8233be4d51e150cec471de5da57f773)
+
+:white_check_mark: 4.5 - [Add a step to deploy the server and client applications to the cloud](https://github.com/frieZZerr/UJ-E-Business/commit/0888152be8233be4d51e150cec471de5da57f773)
+
+:x: 5.0 - [Add the execution of automated regression tests (functional) as a step in Actions]()
+
+Code: [project_10](https://github.com/frieZZerr/UJ-E-Business/tree/project_10)
+
